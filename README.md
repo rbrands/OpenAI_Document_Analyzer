@@ -1,4 +1,7 @@
 # OpenAI Document Analyzer
+
+Duplicated for learning from https://github.com/dennisfelczy/OpenAI_Document_Analyzer
+
 ![Preview Screenshot](preview.png)
 ## Introduction
 This demo application was built to show how Azure AI Document Intelligence and Azure OpenAI Service can be used to increase the efficiency of document analysis.
