@@ -39,6 +39,7 @@ speech_config = speechsdk.SpeechConfig(subscription=os.environ.get('SPEECH_KEY')
 speech_config.speech_recognition_language=st.session_state.language
 audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
+
     
 if 'project' not in st.session_state:
     refresh_project_list()

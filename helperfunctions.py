@@ -10,6 +10,7 @@ import shutil
 import streamlit as st
 import ftfy
 
+
 # refresh vector index list from directory names in faiss folder
 def refresh_vector_index_list():
     print(st.session_state.project)
