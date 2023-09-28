@@ -112,7 +112,7 @@ with st.sidebar:
                 analyze = st.button('Analyze with Azure AI Document Intelligence and create Vector Index')
 
                 if analyze and uploaded_file:
-                    jsonfilename = "projects/"+st.session_state.project+'/files/'+uploaded_file.name+'.json'
+                    jsonfilename = "./projects/"+st.session_state.project+'/files/'+uploaded_file.name+'.json'
                     if os.path.isfile(jsonfilename):
                         print('JSON File '+jsonfilename+' already exists. Skipping Analysis.')
                     else:
@@ -120,7 +120,7 @@ with st.sidebar:
                         
                             #get full path of uploaded file 
                             bytes_data = uploaded_file.read()
-                            file_name = os.path.join("projects/"+st.session_state.project+'/files/', uploaded_file.name)
+                            file_name = os.path.join("./projects/"+st.session_state.project+'/files/', uploaded_file.name)
                             with open(file_name, 'wb') as f:
                                 f.write(bytes_data)
                             

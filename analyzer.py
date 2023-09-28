@@ -37,8 +37,10 @@ def analyze_general_documents(projectname,documentname):
     #result = poller.result()
     
     #analyze document from local file
-    with open("projects/"+projectname+'/files/'+documentname, "rb") as f:
-        print("Analyzing document...")
+    with open("./projects/"+projectname+'/files/'+documentname, "rb") as f:
+        filename = "./projects/"+projectname+'/files/'+documentname
+        print("Analyzing document..." + filename)
+        
         poller = document_analysis_client.begin_analyze_document("prebuilt-document", f)
         result = poller.result()
     
